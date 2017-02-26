@@ -23,7 +23,7 @@ heads = {
 }
 
 req = urllib2.Request(
-    url="http://portal.tju.edu.cn",
+    url="http://e.tju.edu.cn",
     headers=heads
 )
 
@@ -31,8 +31,8 @@ result = opener.open(req)
 
 sid = str(result.headers['Set-Cookie'])[11:43]
 
-print sid
-
+#print sid
+print result.headers
 
 
 sto = ''
