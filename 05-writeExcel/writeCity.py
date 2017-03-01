@@ -10,8 +10,7 @@ def main():
 	worksheet = workbook.add_sheet('my worksheet')
 	for line in data:
 		worksheet.write(int(line)-1, 0, label=line)
-		for index, item in enumerate(data[line]):
-			worksheet.write(int(line)-1, index+1, label = item)
+		worksheet.write(int(line)-1, 1, label = data[line])
 	workbook.save(sys.argv[2])
 
 
